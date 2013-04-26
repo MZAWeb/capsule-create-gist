@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Capsule create Gist
- * Plugin URI:  https://github.com/MZAWeb/bbpress-pingbacks
+ * Plugin URI:  https://github.com/MZAWeb/capsule-create-gist
  * Description: Allows you to export a Capsule entry to an anonymous Gist
  * Author:      Daniel Dvorkin
  * Plugin URI:  http://danieldvork.in
@@ -127,7 +127,7 @@ class Capsule_Create_Gist {
 	}
 
 	/**
-	 * Provides a series 
+	 * Provides a series
 	 * @param $content
 	 *
 	 * @return mixed
