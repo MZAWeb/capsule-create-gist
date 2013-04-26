@@ -68,9 +68,9 @@ class Capsule_Create_Gist {
 
 		$post_id  = intval( $_POST['post_id'] );
 		$post     = get_post( $post_id );
-		$gist_url = $this->create_gist( $post->post_title, $post->post_content );
+		$gist_url = $this->create_gist( $post->post_title, $this->style_content_for_gist( $post->post_content ) );
+		$result   = 'success';
 
-		$result = 'success';
 		if ( empty( $gist_url ) ) {
 			$result   = 'error';
 			$gist_url = __( 'Something went wrong...', 'capsule-create-gist' );
@@ -108,8 +108,8 @@ class Capsule_Create_Gist {
 			'body' => json_encode( array(
 				'description' => $title,
 				'public'      => true,
-				'files'       => array(
-					sanitize_title( $title ) => array(
+				'files' => array(
+					sanitize_title( $title ) . '.html' => array(
 						'content' => $content
 					)
 				)
@@ -127,15 +127,20 @@ class Capsule_Create_Gist {
 	}
 
 	/**
-	 * Provides a series
+	 * Applies to the given $contetn an incomplete series of arbitrary and
+	 * probably broken cosmetic changes to make the gist look nicer.
+	 *
 	 * @param $content
 	 *
 	 * @return mixed
 	 */
-	 protected function style_content_for_gist( $content ) {
+	protected function style_content_for_gist( $content ) {
+
+		// TODO
 
 		return $content;
 	}
+
 
 }
 
