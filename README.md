@@ -24,5 +24,8 @@ In Chrome:
 Changelog
 ---------
 
+0.1.1
+*  Change gist file extension to .md so it'll look nice (dah! I'm a moron)
+
 0.1
 * First release

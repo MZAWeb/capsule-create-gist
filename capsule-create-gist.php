@@ -5,7 +5,7 @@
  * Description: Allows you to export a Capsule entry to an anonymous Gist
  * Author:      Daniel Dvorkin
  * Plugin URI:  http://danieldvork.in
- * Version:     0.1
+ * Version:     0.1.1
  * Text Domain: capsule-create-gist
  * Domain Path: /languages/
  */
@@ -109,7 +109,7 @@ class Capsule_Create_Gist {
 				'description' => $title,
 				'public'      => true,
 				'files' => array(
-					sanitize_title( $title ) . '.html' => array(
+					sanitize_title( $title ) . '.md' => array(
 						'content' => $content
 					)
 				)
